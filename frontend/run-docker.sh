@@ -24,5 +24,6 @@ fi
 echo "컨테이너를 실행합니다... (http://localhost:${PORT})"
 docker run -d \
     --name "$CONTAINER_NAME" \
+    --add-host=host.docker.internal:host-gateway \
     -p "${PORT}:80" \
     "$IMAGE_NAME"
