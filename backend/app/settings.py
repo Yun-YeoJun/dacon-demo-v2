@@ -5,7 +5,7 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
     allowed_origins: str = "http://localhost:5173,http://localhost:3000"
-    model_url: str | None = None
+    model_url: str = "https://34lgfbpo1egrt7-8000.proxy.runpod.net/predict"
     request_timeout_seconds: float = 10.0
     db_path: str = "./data/app.db"
 
